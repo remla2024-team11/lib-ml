@@ -66,20 +66,3 @@ class Preprocessing:
     def set_encoder(self, encoder):
         """Sets the encoder to the provided encoder."""
         self.encoder = encoder
-
-if __name__ == "__main__":
-    X_train = ['0\thttp://www.google.com', '1\thttp://www.facebook.com']
-    y_train = ['good', 'bad']
-    X_test = ['0\thttp://www.google.com', '1\thttp://www.facebook.com']
-    y_test = ['good', 'bad']
-    X_val = ['0\thttp://www.google.com', '1\thttp://www.facebook.com']
-    y_val = ['good', 'bad']
-    preprocessor = Preprocessing()
-    x_train, y_train, x_val, y_val, x_test, y_test = preprocessor.fit_transform(X_train, X_test, X_val)
-    print(x_train)
-    print(y_train)
-    print(x_val)
-    print(y_val)
-    print(x_test)
-    print(y_test)
-    print(preprocessor.get_tokenizer())
